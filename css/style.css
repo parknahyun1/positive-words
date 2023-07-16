@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.background {
+  position: absolute;
+  background: linear-gradient(360deg, rgba(217, 217, 217, 0) 0%, #6ae384 100%, #6ae384 100%);
+  width: 100vw;
+  height: 100vh;
+}
+
+.logo {
+  padding-top: 20vh;
+  position: relative;
+  width: 100vw;
+}
+
+.text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100vh;
+  font-size: 3rem;
+  color: #6ae384;
+}
+.text > div {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.contents {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contents .item {
+  flex: 1 1 25%;
+}
+.contents .item .clover {
+  width: 100%;
+  position: absolute;
+}
+.contents .item .lettering {
+  opacity: 0;
+}
+
+.item:hover {
+  filter: drop-shadow(0px 0px 10px #6ae384);
+  cursor: pointer;
+}
+.item:hover .lettering {
+  opacity: 1;
+  transition: all 300ms ease;
+}
+
+.item:nth-child(1):hover {
+  -webkit-animation: bounce 0.6s alternate ease-out 0.1s infinite;
+          animation: bounce 0.6s alternate ease-out 0.1s infinite;
+}
+
+.item:nth-child(2):hover {
+  -webkit-animation: rotate 2s ease-in-out alternate 0.2s infinite;
+          animation: rotate 2s ease-in-out alternate 0.2s infinite;
+}
+
+.item:nth-child(3):hover {
+  -webkit-animation: scale 1s ease-out 0.1s alternate infinite;
+          animation: scale 1s ease-out 0.1s alternate infinite;
+}
+
+.item:nth-child(4):hover {
+  -webkit-animation: scale2 0.8s alternate 0.2s infinite;
+          animation: scale2 0.8s alternate 0.2s infinite;
+}
+
+.item:nth-child(5):hover {
+  -webkit-animation: rotate 1s alternate ease-in-out 0.2s infinite forwards;
+          animation: rotate 1s alternate ease-in-out 0.2s infinite forwards;
+}
+
+.item:nth-child(6):hover {
+  -webkit-animation: scale 0.8s alternate 0.2s infinite forwards;
+          animation: scale 0.8s alternate 0.2s infinite forwards;
+}
+
+.item:nth-child(7):hover {
+  -webkit-animation: move 0.4s alternate 0.2s infinite forwards;
+          animation: move 0.4s alternate 0.2s infinite forwards;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes scale {
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(0.3);
+  }
+}
+@keyframes scale {
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(0.3);
+  }
+}
+@-webkit-keyframes scale2 {
+  from {
+    transform: scaleX(1.3);
+  }
+  to {
+    transform: scaleX(0.2);
+  }
+}
+@keyframes scale2 {
+  from {
+    transform: scaleX(1.3);
+  }
+  to {
+    transform: scaleX(0.2);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+@-webkit-keyframes move {
+  from {
+    left: 30px;
+  }
+  to {
+    left: -30px;
+  }
+}
+@keyframes move {
+  from {
+    left: 30px;
+  }
+  to {
+    left: -30px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .logo {
+    padding: 4rem;
+    padding-top: 2rem;
+  }
+  .text {
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 5rem;
+    padding-top: 60vh;
+  }
+  .contents {
+    padding: 4rem;
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .logo {
+    padding: 2rem;
+  }
+  .text {
+    font-size: 2rem;
+    padding: 5rem;
+    padding-bottom: 4rem;
+    padding-top: 42.8571428571vh;
+  }
+  .contents {
+    padding: 4rem;
+    padding-top: 0;
+  }
+  .contents .item {
+    flex: 1 1 50%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .background {
+    height: 100vh;
+  }
+  .background .logo {
+    padding: 1rem;
+    padding-top: 2rem;
+  }
+  .text {
+    font-size: 1.2rem;
+    padding: 3rem;
+    padding-top: 15rem;
+  }
+  .contents {
+    padding: 4rem;
+    padding-top: 0;
+  }
+  .contents .item {
+    flex: 1 1 100%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .text {
+    font-size: 1rem;
+    padding: 1rem;
+    padding-top: 25rem;
+  }
+  .contents {
+    padding: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
